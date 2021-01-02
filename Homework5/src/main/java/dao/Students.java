@@ -60,7 +60,7 @@ public class Students {
         try {
             session = sessionFactory.getCurrentSession();
             session.beginTransaction();
-            Student student = session.createQuery("SELECT s FROM Student s WHERE s.id = :id", Student.class)
+            Student student = session.createQuery("SELECT s FROM Students s WHERE s.id = :id", Student.class)
                     .setParameter("id", id)
                     .getSingleResult();
             student.setFio(name);
